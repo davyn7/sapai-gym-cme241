@@ -8,6 +8,8 @@ from stable_baselines3 import DQN
 
 def _do_store_phase(env: SuperAutoPetsEnv, ai):
     env.player.start_turn()
+    # let a pretrained model play the store phase
+    #return env when turn is ended
     if ai == "model_agent":
         while True:
             actions = env._avail_actions()
